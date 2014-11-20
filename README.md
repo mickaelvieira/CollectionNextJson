@@ -7,9 +7,9 @@ Specification:
 
 ## Installation
 
-JsonCollectionNext requires php >= 5.4
+CollectionNextJson requires php >= 5.4
 
-Install JsonCollectionNext with [Composer](https://getcomposer.org/)
+Install CollectionNextJson with [Composer](https://getcomposer.org/)
 
 ```json
 {
@@ -22,8 +22,8 @@ Install JsonCollectionNext with [Composer](https://getcomposer.org/)
 ## Contributing
 
 ```sh
-$ git clone git@github.com:mickaelvieira/JsonCollectionNext.git
-$ cd JsonCollectionNext
+$ git clone git@github.com:mickaelvieira/CollectionNextJson.git
+$ cd CollectionNextJson
 $ composer install
 ```
 
@@ -45,7 +45,7 @@ $ ./bin/phpcs --standard=PSR2 ./src/
 
 ## Documentation
 
-JsonCollectionNext is an extension of [JsonCollecion](https://github.com/mickaelvieira/JsonCollection).
+CollectionNextJson is an extension of [JsonCollecion](https://github.com/mickaelvieira/JsonCollection).
 You will therefore find more information in the JsonCollection [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#documentation).
 
 ### New Entities
@@ -55,8 +55,8 @@ You will therefore find more information in the JsonCollection [documentation](h
 [http://code.ge/media-types/collection-next-json/#object-list](http://code.ge/media-types/collection-next-json/#object-list)
 
 ```php
-use JsonCollectionNext\Entity\ListData;
-use JsonCollectionNext\Entity\Option;
+use CollectionNextJson\Entity\ListData;
+use CollectionNextJson\Entity\Option;
 
 $list = new ListData();
 $list->setMultiple(true);
@@ -74,7 +74,7 @@ $list->addOptionSet([
 [http://code.ge/media-types/collection-next-json/#array-options](http://code.ge/media-types/collection-next-json/#array-options)
 
 ```php
-use JsonCollectionNext\Entity\Option;
+use CollectionNextJson\Entity\Option;
 
 $option = new Option();
 $option->setPrompt('option prompt');
@@ -86,7 +86,7 @@ $option->setValue('option value');
 [http://code.ge/media-types/collection-next-json/#object-status](http://code.ge/media-types/collection-next-json/#object-status)
 
 ```php
-use JsonCollectionNext\Entity\Status;
+use CollectionNextJson\Entity\Status;
 
 $status = new Status();
 $status->setCode('status code');
@@ -98,8 +98,8 @@ $status->setMessage('status message');
 [http://code.ge/media-types/collection-next-json/#object-method](http://code.ge/media-types/collection-next-json/#object-method)
 
 ```php
-use JsonCollectionNext\Entity\Option;
-use JsonCollectionNext\Entity\Method;
+use CollectionNextJson\Entity\Option;
+use CollectionNextJson\Entity\Method;
 
 $method = new Method();
 
@@ -115,8 +115,8 @@ $method->addOptionSet([
 [http://code.ge/media-types/collection-next-json/#object-enctype](http://code.ge/media-types/collection-next-json/#object-enctype)
 
 ```php
-use JsonCollectionNext\Entity\Option;
-use JsonCollectionNext\Entity\Enctype;
+use CollectionNextJson\Entity\Option;
+use CollectionNextJson\Entity\Enctype;
 
 $enctype = new Enctype();
 
@@ -132,7 +132,7 @@ $enctype->addOptionSet([
 [http://code.ge/media-types/collection-next-json/#array-messages](http://code.ge/media-types/collection-next-json/#array-messages)
 
 ```php
-use JsonCollectionNext\Entity\Message;
+use CollectionNextJson\Entity\Message;
 
 $message = new Message();
 $message->setCode('Code message');
@@ -148,8 +148,8 @@ $message->setName('Error message');
 This entity extends ```JsonCollection\Entity\Collection```. See [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#collection)
 
 ```php
-use JsonCollectionNext\Entity\Collection;
-use JsonCollectionNext\Entity\Status;
+use CollectionNextJson\Entity\Collection;
+use CollectionNextJson\Entity\Status;
 
 $collection = new Collection();
 $collection->setStatus(new Status());
@@ -162,8 +162,8 @@ $collection->setStatus(new Status());
 This entity extends ```JsonCollection\Entity\Link```. See [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#link)
 
 ```php
-use JsonCollectionNext\Entity\Link;
-use JsonCollectionNext\Entity\Type\Media;
+use CollectionNextJson\Entity\Link;
+use CollectionNextJson\Entity\Type\Media;
 
 $link = new Link();
 $link->setType(Media::JPEG);
@@ -176,8 +176,8 @@ $link->setType(Media::JPEG);
 This entity extends ```JsonCollection\Entity\Error```. See [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#error)
 
 ```php
-use JsonCollectionNext\Entity\Error;
-use JsonCollectionNext\Entity\Message;
+use CollectionNextJson\Entity\Error;
+use CollectionNextJson\Entity\Message;
 
 $error = new Error();
 
@@ -195,9 +195,9 @@ $error->addMessageSet([
 This entity extends ```JsonCollection\Entity\Template```. See [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#template)
 
 ```php
-use JsonCollectionNext\Entity\Template;
-use JsonCollectionNext\Entity\Enctype;
-use JsonCollectionNext\Entity\Method;
+use CollectionNextJson\Entity\Template;
+use CollectionNextJson\Entity\Enctype;
+use CollectionNextJson\Entity\Method;
 
 $template = new Template();
 $template->setMethod(new Method());
@@ -211,10 +211,10 @@ $template->setEnctype(new Enctype());
 This entity extends ```JsonCollection\Entity\Data```. See [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#data)
 
 ```php
-use JsonCollectionNext\Entity\Data;
-use JsonCollectionNext\Entity\ListData;
-use JsonCollectionNext\Entity\Option;
-use JsonCollectionNext\Entity\Type\Input;
+use CollectionNextJson\Entity\Data;
+use CollectionNextJson\Entity\ListData;
+use CollectionNextJson\Entity\Option;
+use CollectionNextJson\Entity\Type\Input;
 
 $data = new Data();
 $data->setType(Input::DATETIME);
@@ -225,7 +225,7 @@ $data->addOptionToList(new Option());
 
 ## Working with options and messages
 
-In order to work with JsonCollectionNext Array type [Options](http://code.ge/media-types/collection-next-json/#array-options) and [Messages](http://code.ge/media-types/collection-next-json/#array-messages) the API provides 2 interfaces that implement the same logic.
+In order to work with CollectionNextJson Array type [Options](http://code.ge/media-types/collection-next-json/#array-options) and [Messages](http://code.ge/media-types/collection-next-json/#array-messages) the API provides 2 interfaces that implement the same logic.
 
 See. [here](https://github.com/mickaelvieira/JsonCollection#working-with-data-and-links) for details
 

@@ -3,7 +3,7 @@
     "description": "PHP implementation of the Collection.next+JSON Media Type",
     "license": "MIT",
     "type": "library",
-    "homepage": "https://github.com/mickaelvieira/JsonCollectionNext",
+    "homepage": "https://github.com/mickaelvieira/CollectionNextJson",
     "minimum-stability": "stable",
     "keywords": [
         "Hypermedia",
@@ -22,7 +22,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url":  "https://github.com/mickaelvieira/JsonCollection.git"
+            "url":  "https://github.com/mickaelvieira/CollectionJson.git"
         }
     ],
     "require": {
@@ -38,7 +38,7 @@
     },
     "autoload": {
         "psr-4": {
-            "JsonCollectionNext\\": "src/JsonCollectionNext/"
+            "CollectionNextJson\\": "src/CollectionNextJson/"
         }
     }
 }
