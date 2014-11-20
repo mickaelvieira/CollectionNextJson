@@ -145,6 +145,8 @@ $message->setName('Error message');
 
 [http://amundsen.com/media-types/collection/format/#objects-collection](http://amundsen.com/media-types/collection/format/#objects-collection)
 
+This entity extends ```JsonCollection\Entity\Collection```. See [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#collection)
+
 ```php
 use JsonCollectionNext\Entity\Collection;
 use JsonCollectionNext\Entity\Status;
@@ -153,9 +155,25 @@ $collection = new Collection();
 $collection->setStatus(new Status());
 ```
 
+#### Link
+
+[http://amundsen.com/media-types/collection/format/#arrays-links](http://amundsen.com/media-types/collection/format/#arrays-links)
+
+This entity extends ```JsonCollection\Entity\Link```. See [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#link)
+
+```php
+use JsonCollectionNext\Entity\Link;
+use JsonCollectionNext\Entity\Type\Media;
+
+$link = new Link();
+$link->setType(Media::JPEG);
+```
+
 #### Error
 
 [http://amundsen.com/media-types/collection/format/#objects-error](http://amundsen.com/media-types/collection/format/#objects-error)
+
+This entity extends ```JsonCollection\Entity\Error```. See [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#error)
 
 ```php
 use JsonCollectionNext\Entity\Error;
@@ -174,6 +192,8 @@ $error->addMessageSet([
 
 [http://amundsen.com/media-types/collection/format/#objects-template](http://amundsen.com/media-types/collection/format/#objects-template)
 
+This entity extends ```JsonCollection\Entity\Template```. See [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#template)
+
 ```php
 use JsonCollectionNext\Entity\Template;
 use JsonCollectionNext\Entity\Enctype;
@@ -188,6 +208,8 @@ $template->setEnctype(new Enctype());
 
 [http://amundsen.com/media-types/collection/format/#arrays-data](http://amundsen.com/media-types/collection/format/#arrays-data)
 
+This entity extends ```JsonCollection\Entity\Data```. See [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#data)
+
 ```php
 use JsonCollectionNext\Entity\Data;
 use JsonCollectionNext\Entity\ListData;
@@ -199,18 +221,6 @@ $data->setType(Input::DATETIME);
 $data->setRequired(true);
 $data->setList(new ListData());
 $data->addOptionToList(new Option());
-```
-
-#### Link
-
-[http://amundsen.com/media-types/collection/format/#arrays-links](http://amundsen.com/media-types/collection/format/#arrays-links)
-
-```php
-use JsonCollectionNext\Entity\Link;
-use JsonCollectionNext\Entity\Type\Media;
-
-$link = new Link();
-$link->setType(Media::JPEG);
 ```
 
 ## Working with options and messages
