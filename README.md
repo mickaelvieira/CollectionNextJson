@@ -225,7 +225,7 @@ $data->addOptionToList(new Option());
 
 ## Working with options and messages
 
-In order to work with JsonCollection Arrays [Options](http://code.ge/media-types/collection-next-json/#array-options) and [Messages](http://code.ge/media-types/collection-next-json/#array-messages) the API provides 2 interfaces that implement the same logic.
+In order to work with JsonCollectionNext Array type [Options](http://code.ge/media-types/collection-next-json/#array-options) and [Messages](http://code.ge/media-types/collection-next-json/#array-messages) the API provides 2 interfaces that implement the same logic.
 
 See. [here](https://github.com/mickaelvieira/JsonCollection#working-with-data-and-links) for details
 
