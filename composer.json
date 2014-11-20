@@ -1,5 +1,5 @@
 {
-    "name": "mvieira/json-collection-next",
+    "name": "mvieira/collection-next-json",
     "description": "PHP implementation of the Collection.next+JSON Media Type",
     "license": "MIT",
     "type": "library",
