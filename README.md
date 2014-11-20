@@ -1,4 +1,4 @@
-# Json Collection Next
+# Collection Next Json
 
 PHP implementation of the Collection.next+JSON Media Type
 
@@ -45,8 +45,8 @@ $ ./bin/phpcs --standard=PSR2 ./src/
 
 ## Documentation
 
-CollectionNextJson is an extension of [JsonCollecion](https://github.com/mickaelvieira/JsonCollection).
-You will therefore find more information in the JsonCollection [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#documentation).
+CollectionNextJson is an extension of [JsonCollecion](https://github.com/mickaelvieira/CollectionJson).
+You will therefore find more information in the CollectionJson [documentation](https://github.com/mickaelvieira/CollectionJson/blob/master/README.md#documentation).
 
 ### New Entities
 
@@ -145,7 +145,7 @@ $message->setName('Error message');
 
 [http://amundsen.com/media-types/collection/format/#objects-collection](http://amundsen.com/media-types/collection/format/#objects-collection)
 
-This entity extends ```JsonCollection\Entity\Collection```. See [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#collection)
+This entity extends ```CollectionJson\Entity\Collection```. See [documentation](https://github.com/mickaelvieira/CollectionJson/blob/master/README.md#collection)
 
 ```php
 use CollectionNextJson\Entity\Collection;
@@ -159,7 +159,7 @@ $collection->setStatus(new Status());
 
 [http://amundsen.com/media-types/collection/format/#arrays-links](http://amundsen.com/media-types/collection/format/#arrays-links)
 
-This entity extends ```JsonCollection\Entity\Link```. See [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#link)
+This entity extends ```CollectionJson\Entity\Link```. See [documentation](https://github.com/mickaelvieira/CollectionJson/blob/master/README.md#link)
 
 ```php
 use CollectionNextJson\Entity\Link;
@@ -173,7 +173,7 @@ $link->setType(Media::JPEG);
 
 [http://amundsen.com/media-types/collection/format/#objects-error](http://amundsen.com/media-types/collection/format/#objects-error)
 
-This entity extends ```JsonCollection\Entity\Error```. See [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#error)
+This entity extends ```CollectionJson\Entity\Error```. See [documentation](https://github.com/mickaelvieira/CollectionJson/blob/master/README.md#error)
 
 ```php
 use CollectionNextJson\Entity\Error;
@@ -192,7 +192,7 @@ $error->addMessageSet([
 
 [http://amundsen.com/media-types/collection/format/#objects-template](http://amundsen.com/media-types/collection/format/#objects-template)
 
-This entity extends ```JsonCollection\Entity\Template```. See [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#template)
+This entity extends ```CollectionJson\Entity\Template```. See [documentation](https://github.com/mickaelvieira/CollectionJson/blob/master/README.md#template)
 
 ```php
 use CollectionNextJson\Entity\Template;
@@ -208,7 +208,7 @@ $template->setEnctype(new Enctype());
 
 [http://amundsen.com/media-types/collection/format/#arrays-data](http://amundsen.com/media-types/collection/format/#arrays-data)
 
-This entity extends ```JsonCollection\Entity\Data```. See [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#data)
+This entity extends ```CollectionJson\Entity\Data```. See [documentation](https://github.com/mickaelvieira/CollectionJson/blob/master/README.md#data)
 
 ```php
 use CollectionNextJson\Entity\Data;
@@ -227,7 +227,7 @@ $data->addOptionToList(new Option());
 
 In order to work with CollectionNextJson Array type [Options](http://code.ge/media-types/collection-next-json/#array-options) and [Messages](http://code.ge/media-types/collection-next-json/#array-messages) the API provides 2 interfaces that implement the same logic.
 
-See. [here](https://github.com/mickaelvieira/JsonCollection#working-with-data-and-links) for details
+See. [here](https://github.com/mickaelvieira/CollectionJson#working-with-data-and-links) for details
 
 - The interface ```OptionAware``` implemented by ```Enctype```, ```ListData``` and ```Method``` entities,
 provides the methods ```addOption```, ```addOptionSet``` and ```getOptionSet```
