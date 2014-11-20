@@ -46,7 +46,7 @@ $ ./bin/phpcs --standard=PSR2 ./src/
 ## Documentation
 
 JsonCollectionNext is an extension of [JsonCollecion](https://github.com/mickaelvieira/JsonCollection).
-You will therefore find more information in the JsonCollection documentation.
+You will therefore find more information in the JsonCollection [documentation](https://github.com/mickaelvieira/JsonCollection/blob/master/README.md#documentation).
 
 ### New Entities
 
@@ -101,9 +101,13 @@ $status->setMessage('status message');
 use JsonCollectionNext\Entity\Option;
 use JsonCollectionNext\Entity\Method;
 
-$option = new Option();
 $method = new Method();
-$method->addOption($option);
+
+$method->addOption(new Option());
+$method->addOptionSet([
+    new Option(),
+    new Option()
+]);
 ```
 
 #### Enctype
@@ -114,9 +118,13 @@ $method->addOption($option);
 use JsonCollectionNext\Entity\Option;
 use JsonCollectionNext\Entity\Enctype;
 
-$option = new Option();
 $enctype = new Enctype();
-$enctype->addOption($option);
+
+$enctype->addOption(new Option());
+$enctype->addOptionSet([
+    new Option(),
+    new Option()
+]);
 ```
 
 #### Message
@@ -162,7 +170,7 @@ $error->addMessageSet([
 ]);
 ```
 
-### Template
+#### Template
 
 [http://amundsen.com/media-types/collection/format/#objects-template](http://amundsen.com/media-types/collection/format/#objects-template)
 
@@ -176,7 +184,7 @@ $template->setMethod(new Method());
 $template->setEnctype(new Enctype());
 ```
 
-### Data
+#### Data
 
 [http://amundsen.com/media-types/collection/format/#arrays-data](http://amundsen.com/media-types/collection/format/#arrays-data)
 
@@ -193,7 +201,7 @@ $data->setList(new ListData());
 $data->addOptionToList(new Option());
 ```
 
-### Link
+#### Link
 
 [http://amundsen.com/media-types/collection/format/#arrays-links](http://amundsen.com/media-types/collection/format/#arrays-links)
 
