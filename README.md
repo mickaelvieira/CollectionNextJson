@@ -1,4 +1,4 @@
-# Json Collection
+# Json Collection Next
 
 PHP implementation of the Collection.next+JSON Media Type
 
