@@ -27,7 +27,7 @@
     ],
     "require": {
         "php": "~5.4",
-        "mvieira/json-collection": "dev-master"
+        "mvieira/collection-json": "dev-master"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.0",
